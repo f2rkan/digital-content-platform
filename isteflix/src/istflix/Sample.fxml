@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #B854F5;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="istflix.SampleController">
+   <children>
+      <TableView fx:id="tableView" layoutX="40.0" layoutY="23.0" onMousePressed="#tableView_pressed" prefHeight="200.0" prefWidth="1088.0">
+        <columns>
+          <TableColumn fx:id="view_isim" prefWidth="164.0" text="İSİM" />
+            <TableColumn fx:id="view_ulke" prefWidth="108.0" text="YERLİ/YABANCI" />
+            <TableColumn fx:id="view_tur" prefWidth="98.0" text="TÜR" />
+            <TableColumn fx:id="view_diziFilm" prefWidth="87.0" text="DİZİ/FİLM" />
+            <TableColumn fx:id="view_yonetmen" prefWidth="123.0" text="YÖNETMEN" />
+            <TableColumn fx:id="view_starlar" prefWidth="128.0" text="STARLAR" />
+            <TableColumn fx:id="view_muzik" prefWidth="88.0" text="MÜZİK" />
+            <TableColumn fx:id="view_imdb" prefWidth="111.0" text="IMDB PUANI" />
+            <TableColumn fx:id="view_tarih" prefWidth="144.0" text="ÇIKIŞ TARİHİ" />
+            <TableColumn fx:id="view_id" prefWidth="36.0" text="ID" />
+        </columns>
+      </TableView>
+      <VBox layoutX="394.0" layoutY="241.0" prefHeight="422.0" prefWidth="116.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="370.0" text="ID" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="İSİM" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" text="YERLİ/YABANCI" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="TÜR" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="27.0" text="DİZİ/FİLM" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="44.0" text="YÖNETMEN" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="61.0" text="STARLAR" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="95.0" text="MÜZİK" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="112.0" text="IMDB PUANI" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="129.0" text="ÇIKIŞ TARİHİ" textAlignment="CENTER" textFill="#d9ff00e8">
+               <font>
+                  <Font name="Gadugi" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="579.0" layoutY="241.0" prefHeight="422.0" prefWidth="228.0" spacing="20.0">
+         <children>
+            <TextField fx:id="field_id" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="field_isim" />
+            <TextField fx:id="field_ulke" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="field_tur" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="field_diziFilm" layoutX="10.0" layoutY="55.0" />
+            <TextField fx:id="field_yonetmen" layoutX="10.0" layoutY="100.0" />
+            <TextField fx:id="field_starlar" layoutX="10.0" layoutY="145.0" />
+            <TextField fx:id="field_muzik" layoutX="10.0" layoutY="190.0" />
+            <TextField fx:id="field_imdb" layoutX="10.0" layoutY="235.0" />
+            <DatePicker fx:id="field_tarih" prefHeight="25.0" prefWidth="228.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="894.0" layoutY="253.0" prefHeight="353.0" prefWidth="139.0" spacing="15.0">
+         <children>
+            <Button fx:id="button_kaydet" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#button_kaydetAction" prefHeight="75.0" prefWidth="139.0" text="KAYDET" textAlignment="CENTER" />
+            <Button fx:id="button_guncelle" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button_guncelleAction" prefHeight="75.0" prefWidth="139.0" text="GÜNCELLE" textAlignment="CENTER" />
+            <Button fx:id="button_sil" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#button_silAction" prefHeight="75.0" prefWidth="139.0" text="SİL" textAlignment="CENTER" />
+            <Button fx:id="button_reset" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#button_resetAction" prefHeight="75.0" prefWidth="139.0" text="LİSTEYİ RESETLE" textAlignment="CENTER" />
+         </children>
+      </VBox>
+      <ImageView fitHeight="131.0" fitWidth="228.0" layoutX="78.0" layoutY="496.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../fotoğraflar/maxresdefault.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="78.0" layoutY="239.0" text="YAPIM">
+         <font>
+            <Font name="Gabriola" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="306.0" text="EKLEME">
+         <font>
+            <Font name="Gabriola" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="373.0" text="PANELİ">
+         <font>
+            <Font name="Gabriola" size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
